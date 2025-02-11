@@ -1,3 +1,13 @@
+/*
+* File: App.java
+* Author: Bajusz Réka
+* Copyright: 2025, Bajusz Réka
+* Group: Szoft V
+* Date: 2025-02-11
+* Github: https://github.com/BjRkaZs/Hengfel
+* Licenc: MIT
+*/
+
 package com.example;
 
 import javafx.application.Application;

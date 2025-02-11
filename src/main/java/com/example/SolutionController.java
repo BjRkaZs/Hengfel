@@ -1,5 +1,14 @@
-package com.example;
+/*
+* File: SolutionController.java
+* Author: Bajusz Réka
+* Copyright: 2025, Bajusz Réka
+* Group: Szoft V
+* Date: 2025-02-11
+* Github: https://github.com/BjRkaZs/Hengfel
+* Licenc: MIT
+*/
 
+package com.example;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
