@@ -12,6 +12,7 @@ package com.example;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ListView;
 
 public class SolutionController {
 
@@ -25,6 +26,19 @@ public class SolutionController {
     private TextField resultField;
 
     @FXML
+    private ListView<String> resultList;
+
+    @FXML
+    void initialize() {
+        System.out.println("Előkészítés");
+        App._stage.setOnCloseRequest(e->{
+            System.out.println("Bezárva");
+            
+            Store.saveResults(resultList.getItems().toString());
+        });
+    }
+
+    @FXML
     void onClickCalcButton(ActionEvent event) {
         String radiusStr = this.radiusField.getText();
         double radius = Double.parseDouble(radiusStr);
@@ -32,6 +46,7 @@ public class SolutionController {
         double length = Double.parseDouble(lengthStr);
         Double surface = this.calcSurface(radius, length);
         this.resultField.setText(surface.toString());
+        this.resultList.getItems().add(resultField.getText());
     }
 
     private Double calcSurface(double radius, double length){
